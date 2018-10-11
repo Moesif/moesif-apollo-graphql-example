@@ -1,14 +1,14 @@
 # Moesif Apollo GraphQL Example
 
 
-[Moesif](https://www.moesif.com) is the most advanced API analytics platform with native [support for GraphQl](https://www.moesif.com/docs/platform/graphql/).
+[Moesif](https://www.moesif.com) is the most advanced API analytics platform with native [support for GraphQL](https://www.moesif.com/docs/platform/graphql/).
 
 [Apollo](https://www.apollographql.com/) is one of the most popular frameworks for creating and using [GraphQL](https://graphql.org/learn/) in the node ecosystem.
 
 This example builds upon the [get started example](https://www.apollographql.com/docs/apollo-server/essentials/server.html#middleware) from the official guide on Apollo's website to demonstrate how you can set up Moesif quickly using the [moesif express](https://www.moesif.com/docs/server-integration/express/) middleware.
 
 
-## Summary of Key Changes
+## Summary of key changes
 
 Apollo sever works with any express app. When you set up Apollo with express, you can simply add the moesif-express
 middleware. Below summarizes the code needed. See index.js from this package for details.
@@ -57,7 +57,7 @@ query {
 
 You should see the GraphQL request captured in your Event Stream, it is where it will show up first.
 
-## Notes:
+## Notes
 
 - You'll notice other requests besides GraphQL are captured also. That is ok and expected, since moesif-express
 works at a lower level than GraphQL. You can change this default by modify the skip option of moesif-express.
