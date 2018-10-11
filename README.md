@@ -1,4 +1,4 @@
-# Moesif Apollo GraphQl Example
+# Moesif Apollo GraphQL Example
 
 
 [Moesif](https://www.moesif.com) is the most advanced API analytics platform with native [support for GraphQl](https://www.moesif.com/docs/platform/graphql/).
