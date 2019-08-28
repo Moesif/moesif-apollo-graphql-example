@@ -1,9 +1,9 @@
 # Moesif Apollo GraphQL Example
 
 
-[Moesif](https://www.moesif.com) is the most advanced API analytics platform with native [support for GraphQL](https://www.moesif.com/docs/platform/graphql/).
+[Moesif](https://www.moesif.com/features/graphql-analytics) is an API Analaytics and monitoring platform for [GraphQL](https://www.moesif.com/features/graphql-analytics).
 
-[Apollo](https://www.apollographql.com/) is one of the most popular frameworks for creating and using [GraphQL](https://graphql.org/learn/) in the node ecosystem.
+[Apollo](https://www.apollographql.com/) is a popular frameworks for creating and using [GraphQL](https://graphql.org/learn/) in the Node.js ecosystem.
 
 This example builds upon the [get started example](https://www.apollographql.com/docs/apollo-server/essentials/server.html#middleware) from the official guide on Apollo's website to demonstrate how you can set up Moesif quickly using the [moesif express](https://www.moesif.com/docs/server-integration/express/) middleware.
 
@@ -11,7 +11,7 @@ This example builds upon the [get started example](https://www.apollographql.com
 ## Summary of key changes
 
 Apollo sever works with any express app. When you set up Apollo with express, you can simply add the moesif-express
-middleware. Below summarizes the code needed. See index.js from this package for details.
+middleware. Below summarizes the code needed. See `index.js` from this package for details.
 
 ```javascript
 const { ApolloServer, gql } = require('apollo-server-express');
@@ -24,7 +24,7 @@ const server = new ApolloServer({ typeDefs, resolvers });
 const app = express();
 
 const moesifOptions = {
-  applicationId: 'replace with your moesif application id'
+  applicationId: 'Your Moesif Application Id'
 };
 
 const moesifMiddleware = moesifExpress(moesifOptions);
@@ -38,6 +38,13 @@ server.applyMiddleware({ app });
 app.listen({ port: 6868 });
 
 ```
+
+Your Moesif Application Id can be found in the [_Moesif Portal_](https://www.moesif.com/).
+After signing up for a Moesif account, your Moesif Application Id will be displayed during the onboarding steps. 
+
+You can always find your Moesif Application Id at any time by logging 
+into the [_Moesif Portal_](https://www.moesif.com/), click on the top right menu,
+and then clicking _Installation_.
 
 
 ## To run this example:
