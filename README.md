@@ -1,7 +1,7 @@
 # Moesif Apollo GraphQL Example
 
 
-[Moesif](https://www.moesif.com/features/graphql-analytics) is an API Analaytics and monitoring platform for [GraphQL](https://www.moesif.com/features/graphql-analytics).
+[Moesif](https://www.moesif.com/features/graphql-analytics) is an API Analytics and monitoring platform for [GraphQL](https://www.moesif.com/features/graphql-analytics).
 
 [Apollo](https://www.apollographql.com/) is a popular frameworks for creating and using [GraphQL](https://graphql.org/learn/) in the Node.js ecosystem.
 
