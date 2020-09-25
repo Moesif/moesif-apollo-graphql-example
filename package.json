@@ -14,6 +14,6 @@
     "apollo-server-express": "^2.9.12",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
-    "moesif-express": "^2.9.15"
+    "moesif-nodejs": "^3.0.0"
   }
 }
