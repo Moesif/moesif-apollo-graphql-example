@@ -1,6 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server-express');
 const express = require('express');
-const moesifExpress = require('moesif-nodejs');
+const moesif = require('moesif-nodejs');
 
 // This is a (sample) collection of books we'll be able to query
 // the GraphQL server for.  A more complete example might fetch
@@ -53,7 +53,7 @@ const moesifOptions = {
   applicationId: 'Your Moesif Application Id'
 };
 
-const moesifMiddleware = moesifExpress(moesifOptions);
+const moesifMiddleware = moesif(moesifOptions);
 
 app.use(moesifMiddleware);
 
