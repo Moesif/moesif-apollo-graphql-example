@@ -11,9 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.9.12",
-    "apollo-server-express": "^2.9.12",
-    "express": "^4.17.1",
-    "graphql": "^14.5.8",
+    "apollo-server-express": "^3.6.7",
+    "express": "^4.17.3",
     "moesif-nodejs": "^3.1.3"
   }
 }
