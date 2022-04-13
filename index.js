@@ -45,21 +45,24 @@ const resolvers = {
 // In the most basic sense, the ApolloServer can be started
 // by passing type definitions (typeDefs) and the resolvers
 // responsible for fetching the data for those types.
-const server = new ApolloServer({ typeDefs, resolvers });
 
-const app = express();
+//For Apollo Server Express 3.0 and above, you need to define an async function that takes in typeDefs and resolvers parameters, then assign the server to the same Apollo initialization
+async function startApolloServer(typeDefs, resolvers) {
+  const server = new ApolloServer({ typeDefs, resolvers });
 
-const moesifOptions = {
-  applicationId: 'Your Moesif Application Id'
-};
+  const app = express();
+  const moesifOptions = {
+    applicationId: 'Your Moesif Application Id',
+  };
+  const moesifMiddleware = moesif(moesifOptions);
+  app.use(moesifMiddleware);
 
-const moesifMiddleware = moesif(moesifOptions);
+  await server.start();
+  server.applyMiddleware({ app });
+  const port = 6868;
+  app.listen({ port }, () => {
+    console.log(`Server is listening on port ${port}${server.graphqlPath}`);
+  });
+}
 
-app.use(moesifMiddleware);
-
-server.applyMiddleware({ app });
-
-const port = 6868;
-app.listen({ port }, () => {
-  console.log(`server ready at http://localhost:${port}${server.graphqlPath}`);
-})
+startApolloServer(typeDefs, resolvers);
