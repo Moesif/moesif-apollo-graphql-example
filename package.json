@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.9.12",
+    "apollo-server": "^2.25.4",
     "apollo-server-express": "^3.6.7",
     "express": "^4.17.3",
     "moesif-nodejs": "^3.1.3"
