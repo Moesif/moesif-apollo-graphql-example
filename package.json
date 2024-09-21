@@ -12,7 +12,7 @@
   "dependencies": {
     "apollo-server": "^2.9.12",
     "apollo-server-express": "^3.6.7",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "moesif-nodejs": "^3.1.3"
   }
 }
